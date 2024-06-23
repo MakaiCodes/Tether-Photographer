@@ -1,0 +1,299 @@
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+  /**
+   * color
+   */
+  --white: hsl(0, 0%, 100%);
+  /**
+   * typography 
+   */
+  --fs-base: 0.85rem;
+  --fs-1: 1.875rem;
+  --fs-2: 1.5rem;
+  --fs-3: 1.25rem;
+  --fs-4: 0.875rem;
+  --fs-5: 0.75rem;
+  /**
+   * spacing 
+   */
+  --py: 3rem;
+}
+
+:root {
+  /**
+     * colors
+     */
+  --white: hsla(0, 0%, 100%, 1);
+  --white_a8: hsla(0, 0%, 100%, 0.08);
+  --white_a12: hsla(0, 0%, 100%, 0.12);
+  --manatee: hsla(219, 10%, 62%, 1);
+  --cadet-blue-crayola_a20: hsla(222, 23%, 71%, 0.2);
+  --raisin-black: hsla(216, 14%, 14%, 1);
+  --raisin-black_a6: hsla(216, 14%, 14%, 0.06);
+  --gunmetal: hsla(214, 15%, 21%, 1);
+  --charcoal: hsla(219, 22%, 26%, 1);
+  /**
+     * typography
+    */
+  --ff-manrope: "Manrope", sans-serif;
+  --ff-outfit: "Outfit", sans-serif;
+  --ff-ubuntu: "Ubuntu Sans Mono", monospace;
+  /**
+     * spacing
+     */
+  --section-padding: 30px;
+  /**
+     * box shadow
+     */
+  --shadow-1: 0 0 20px hsla(216, 14%, 14%, 0.05);
+  --shadow-2: 0 4px 28px hsla(216, 14%, 14%, 0.07);
+  /**
+     * border radius
+     */
+  --radius-circle: 50%;
+  --radius-pill: 100px;
+  --radius-8: 8px;
+  --radius-6: 6px;
+  /**
+     * transition
+     */
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --transition-3: 0.3s ease-in-out;
+}
+
+/*-----------------------------------*\
+    #RESET
+  \*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+img,
+span,
+button,
+ion-icon {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+ion-icon {
+  pointer-events: none;
+}
+
+html {
+  font-size: 10px;
+  font-family: var(--ff-outfit);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f1f1f1;
+  color: var(--black-coral);
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+/*-----------------------------------*\
+    #REUSED STYLE
+\*-----------------------------------*/
+
+.container {
+  padding-inline: 16px;
+}
+
+section {
+  padding: var(--section-padding) 0;
+}
+
+.py-2 {
+  padding: 2rem;
+}
+
+/*-----------------------------------*\
+   
+\*-----------------------------------*/
+
+/* Left Container */
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar .logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navbar {
+  margin: 1rem 0;
+}
+
+.navbar-item {
+  margin-bottom: 1rem;
+}
+
+.navbar-link {
+  display: inline-block;
+  transition: 500ms transform ease-in-out;
+}
+
+.navbar-link.active {
+  font-weight: bold;
+}
+
+.navbar-link:hover {
+  transform: translateX(0.9rem);
+}
+
+.socials {
+  margin-top: auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.socials-link {
+  transition: 500ms transform ease-in-out;
+}
+
+.socials-link:hover {
+  transform: translateY(-0.7rem);
+}
+
+/* Right-Container */
+
+.right-container {
+  background: #fff;
+  /* padding: 2rem; */
+}
+
+.cover {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* Cover */
+
+.grid-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.cover-box {
+  overflow: hidden;
+}
+
+.cover .cover-image {
+  height: 100%;
+  width: 100%;
+  transition: 100ms transform ease 0.3s;
+}
+
+/* .cover-image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+} */
+
+/* About-Content */
+
+.about {
+  position: relative;
+}
+
+.about-content {
+  max-width: 700px;
+}
+
+.about-content-detials {
+  margin-bottom: 1.5rem;
+  line-height: 2;
+}
+
+.circle {
+  width: 30%;
+}
+
+/* Work */
+
+.work .grid-box {
+  gap: 1.5rem;
+}
+
+.layer-text {
+  padding: 1rem 0;
+}
+
+/* Tablet */
+
+@media (max-width: 830px) {
+  /*Layout */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+  }
+  /* */
+  .cover {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    min-height: 100vh;
+  }
+  .cover .cover-box:nth-child(2),
+  .cover .cover-box:nth-child(3) {
+    display: none;
+  }
+}

@@ -1,0 +1,1 @@
+all non copyright images. This project is a fake photographer website. Like I'm making it for someone.
